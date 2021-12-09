@@ -51,9 +51,6 @@
 						</div>		
 					</div>
 				</div>
-				<div id="towns">
-                                     
-				</div>
 				<div class="title">
 					Частные <span class="title__span">перевозки из Украины</span> в Донецк, Ростов <span class="title__span1">и обратно 
 						<div class="title__svg">
@@ -81,10 +78,15 @@
 									<path d="M15.9407 0.00731944C10.2693 0.544258 5.3361 3.76587 2.45006 8.79967C-0.503106 13.9341 -0.805101 20.176 1.64468 25.5454L16.8803 58.1308C17.0481 58.4664 17.3837 58.6678 17.7528 58.6678C17.887 58.6678 18.0214 58.6342 18.1556 58.5671C18.6254 58.3322 18.8267 57.7953 18.6254 57.2919L3.38969 24.74C1.20838 19.9411 1.47685 14.3368 4.12799 9.73931C6.71201 5.24245 11.1082 2.38991 16.1755 1.92009C16.7125 1.85297 17.0817 1.41671 17.0481 0.879775C16.9139 0.342836 16.4441 -0.0597979 15.9407 0.00731944Z" fill="#272525"/>
 								</svg>
 								<div class="orderBlock__text">Откуда?</div>
-								<div>
-									<svg  class="orderBlock__svg1" width="43" height="19" viewBox="0 0 43 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<div  id="openModal">
+									<svg class="orderBlock__svg1" width="43" height="19" viewBox="0 0 43 19" fill="none" xmlns="http://www.w3.org/2000/svg">
 										<path d="M1 1L22.3542 18L42 1" stroke="#727272" stroke-width="1.5" stroke-linejoin="round"/>
 									</svg>
+								</div>
+							</div>
+							<div class="modalWindow" id="modalWind">
+								<div id="towns" >
+                                     
 								</div>
 							</div>
 						</div>
@@ -100,12 +102,17 @@
 								</div>
 							
 								<div class="orderBlock__text">Куда?</div>
-								<div>
+								<div id="openModal1">
 									<svg  class="orderBlock__svg1" width="43" height="19" viewBox="0 0 43 19" fill="none" xmlns="http://www.w3.org/2000/svg">
 										<path d="M1 1L22.3542 18L42 1" stroke="#727272" stroke-width="1.5" stroke-linejoin="round"/>
 									</svg>	
 								</div>
 								
+							</div>
+							<div class="modalWindow1" id="modalWind1">
+								<div id="towns1" >
+                                     
+								</div>
 							</div>
 						</div>
 						<div  class="orderBlock__inputBlock">
@@ -611,7 +618,16 @@
 										<span class="sales__sale__price">- 200</span> грн за каждого третьего пассажира
 									</div>
 									<label for="inlineCheckbox2" class="sales__sale__checkBox" id="checkBox2">
-										<input  class="sales__sale__check" type="checkbox" id="inlineCheckbox2" value="option2">
+										<input  class="sales__sale__checkNone" type="checkbox" id="inlineCheckbox2" value="option2">
+										<div class="sales__sale__check">
+											<div >
+												<svg id="svgCheckBox2" class="checkBoxNone" width="28" height="28" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path d="M1.73755 8.30343C1.3646 7.89609 0.732048 7.86822 0.324709 8.24117C-0.0826293 8.61412 -0.110504 9.24668 0.262448 9.65401L1.73755 8.30343ZM7.42857 16L6.69102 16.6753L7.49403 17.5523L8.22035 16.6108L7.42857 16ZM19.7918 1.6108C20.1291 1.17351 20.0481 0.545555 19.6108 0.208218C19.1735 -0.12912 18.5456 -0.0480927 18.2082 0.389197L19.7918 1.6108ZM0.262448 9.65401L6.69102 16.6753L8.16612 15.3247L1.73755 8.30343L0.262448 9.65401ZM8.22035 16.6108L19.7918 1.6108L18.2082 0.389197L6.63679 15.3892L8.22035 16.6108Z" fill="#00B612"/>
+												</svg>
+											</div>
+										
+												
+										</div>
 									</label>
 								</div>
 								<div class="sales__sale">
@@ -822,7 +838,7 @@
 		<section class="footer">
 			<div class="container">
                 <div class="row">
-                    <div class="col-md-3">
+                    <div class="col-lg-3 col-md-6 col-sm-12">
 						<div class="footer__block">
 							<div class="footer__title">
 								Заказать билет
@@ -834,7 +850,7 @@
 							<div class="footer__workTime">10:00 - 22:00 без выходных</div>
 						</div> 
 					</div>
-					<div class="col-md-3">
+					<div class="col-lg-3 col-md-6 col-sm-12">
 						<div class="footer__block">
 							<div class="footer__title">
 								Скидки
@@ -846,7 +862,7 @@
 							</div>
 						</div> 
 					</div>
-					<div class="col-md-3">
+					<div class="col-lg-3 col-md-6 col-sm-12">
 						<div class="footer__block">
 							<div class="footer__title">
 								Документы
@@ -857,7 +873,7 @@
 							</div>
 						</div> 
 					</div>
-					<div class="col-md-3">
+					<div class="col-lg-3 col-md-6 col-sm-12">
 						<div class="footer__block">
 							<svg width="300" height="127" viewBox="0 0 371 147" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 								<rect width="371" height="147" fill="url(#pattern0)"/>
