@@ -6,6 +6,8 @@
 // });
 const towns = document.getElementById('towns')
 const towns1 = document.getElementById('towns1')
+const towns2 = document.getElementById('towns2')
+const towns3 = document.getElementById('towns3')
 const data = [
 	{ id: 0, name: 'Мариуполь'},
 	{ id: 1, name: 'Донецк'},
@@ -30,7 +32,30 @@ const dataOne = [
 	{ id: 8, name: 'Славянск'},
 	{ id: 9, name: 'Бердянск'},
 ]
-
+const dataTwo = [
+	{ id: 0, name: 'Мариуполь'},
+	{ id: 1, name: 'Донецк'},
+	{ id: 2, name: 'Днепр'},
+	{ id: 3, name: 'Краматорск'},
+	{ id: 4, name: 'Киев'},
+	{ id: 5, name: 'Одесса'},
+	{ id: 6, name: 'Харьков'},
+	{ id: 7, name: 'Волноваха'},
+	{ id: 8, name: 'Славянск'},
+	{ id: 9, name: 'Бердянск'},
+]
+const dataThree = [
+	{ id: 0, name: 'Мариуполь'},
+	{ id: 1, name: 'Донецк'},
+	{ id: 2, name: 'Днепр'},
+	{ id: 3, name: 'Краматорск'},
+	{ id: 4, name: 'Киев'},
+	{ id: 5, name: 'Одесса'},
+	{ id: 6, name: 'Харьков'},
+	{ id: 7, name: 'Волноваха'},
+	{ id: 8, name: 'Славянск'},
+	{ id: 9, name: 'Бердянск'},
+]
 data.map((elem) => (
 	towns.insertAdjacentHTML('beforeend', `
    <div class="towns">${elem.name}</div>
@@ -42,10 +67,30 @@ dataOne.map((elem) => (
 `)
 ))
 
+dataTwo.map((elem) => (
+	towns2.insertAdjacentHTML('beforeend', `
+   <div class="towns">${elem.name}</div>
+`)
+))
+
+dataThree.map((elem) => (
+	towns3.insertAdjacentHTML('beforeend', `
+   <div class="towns">${elem.name}</div>
+`)
+))
+
 const openModal = document.getElementById('openModal')
 const modalWind = document.getElementById('modalWind')
+
 const openModal1 = document.getElementById('openModal1')
 const modalWind1 = document.getElementById('modalWind1')
+
+const openModal2 = document.getElementById('openModal2')
+const modalWind2 = document.getElementById('modalWind2')
+
+
+const openModal3 = document.getElementById('openModal3')
+const modalWind3 = document.getElementById('modalWind3')
 
 
 let flag = false
@@ -68,6 +113,28 @@ openModal1.onclick = () => {
 	} else if (!flag) {
 		modalWind1.classList.add('modalWindowNone')
 		modalWind1.classList.remove('modalWindow1')
+	}
+}
+
+openModal2.onclick = () => {
+	flag = !flag
+	if (flag) {
+		modalWind2.classList.add('modalWindow1')
+		modalWind2.classList.remove('modalWindowNone')
+	} else if (!flag) {
+		modalWind2.classList.add('modalWindowNone')
+		modalWind2.classList.remove('modalWindow1')
+	}
+}
+
+openModal3.onclick = () => {
+	flag = !flag
+	if (flag) {
+		modalWind3.classList.add('modalWindow1')
+		modalWind3.classList.remove('modalWindowNone')
+	} else if (!flag) {
+		modalWind3.classList.add('modalWindowNone')
+		modalWind3.classList.remove('modalWindow1')
 	}
 }
 
