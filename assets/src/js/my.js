@@ -47,7 +47,8 @@ const modalWind = document.getElementById('modalWind')
 const openModal1 = document.getElementById('openModal1')
 const modalWind1 = document.getElementById('modalWind1')
 
-let flag = true
+
+let flag = false
 
 openModal.onclick = () => {
 	flag = !flag
